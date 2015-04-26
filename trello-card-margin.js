@@ -10,10 +10,13 @@
 // ==/UserScript==
 var update = function() {
   $('div.current.markeddown.hide-on-edit.js-card-desc.js-show-with-desc :header').each(function(i){
-    if (i == 0) {
+    if ($(this)[0].tagName == "H2") {
       $(this).css("margin-bottom", "5px");
+      $(this).css("border-left", "5px solid #48832C");
+      $(this).css("border-bottom", "1px solid #48832C");
     } else {
       $(this).css("margin", "20px 0px 5px 0px");
+      $(this).css("border-bottom", "1px solid #48832C");
     }
   });
 };
